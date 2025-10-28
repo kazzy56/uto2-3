@@ -239,6 +239,34 @@ a:hover {
   opacity: 0.7;
 }
 
+.l-footer {
+  background-color: #666;
+  padding: 30px 0;
+}
+@media (width <= 767px) {
+  .l-footer {
+    padding: 15px 0;
+  }
+}
+.l-footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.l-footer__logo {
+  max-width: 130px;
+}
+@media (width <= 767px) {
+  .l-footer__logo {
+    max-width: 80px;
+  }
+}
+.l-footer__copyright {
+  color: #fff;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
 .l-inner {
   max-width: 1040px;
   margin: 0 auto;

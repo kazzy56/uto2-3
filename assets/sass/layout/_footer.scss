@@ -1,0 +1,30 @@
+@use "../global" as *;
+
+.l-footer {
+  background-color: #666;
+  padding: 30px 0;
+
+  @include mq(md) {
+    padding: 15px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 130px;
+
+    @include mq(md) {
+      max-width: 80px;
+    }
+  }
+
+  &__copyright {
+    color: $color-white;
+    @include fz(12);
+    text-transform: capitalize;
+  }
+}
