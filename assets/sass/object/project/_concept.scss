@@ -1,0 +1,42 @@
+@use "../../global" as *;
+
+.p-concept {
+  &__inner {
+    position: relative;
+
+    @include mq(md) {
+      position: static;
+    }
+  }
+
+  &__img-wrapper {
+    max-width: 720px;
+
+    @include mq(md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    // inner付けるとpt分を引かないといけない
+    // top: 325px;
+    top: calc(325px - 130px);
+    right: 0;
+    max-width: 600px;
+    padding: 40px;
+    background-color: rgb(253 248 248 / 0.8);
+
+    @include mq(md) {
+      position: static;
+      padding: 0;
+      background-color: transparent
+    }
+  }
+
+  &__text {
+    @include fz(15);
+    line-height: 1.8;
+    text-align: justify;
+  }
+}

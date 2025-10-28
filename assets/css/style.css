@@ -239,6 +239,34 @@ a:hover {
   opacity: 0.7;
 }
 
+.l-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.l-section {
+  padding: 130px 0;
+}
+@media (width <= 767px) {
+  .l-section {
+    padding: 40px 0;
+  }
+}
+
+.c-heading-primary {
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 1.875rem;
+  line-height: 1.5;
+  font-family: "YuMincho", "Yu Mincho", serif;
+}
+@media (width <= 767px) {
+  .c-heading-primary {
+    font-size: 1.5rem;
+  }
+}
+
 .c-logo {
   position: fixed;
   top: 30px;
@@ -257,6 +285,43 @@ a:hover {
 }
 .c-logo__link {
   display: block;
+}
+
+.p-concept__inner {
+  position: relative;
+}
+@media (width <= 767px) {
+  .p-concept__inner {
+    position: static;
+  }
+}
+.p-concept__img-wrapper {
+  max-width: 720px;
+}
+@media (width <= 767px) {
+  .p-concept__img-wrapper {
+    margin-bottom: 30px;
+  }
+}
+.p-concept__content {
+  position: absolute;
+  top: 195px;
+  right: 0;
+  max-width: 600px;
+  padding: 40px;
+  background-color: rgba(253, 248, 248, 0.8);
+}
+@media (width <= 767px) {
+  .p-concept__content {
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+.p-concept__text {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 .p-hero__img {
