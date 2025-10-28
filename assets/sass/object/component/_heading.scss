@@ -1,0 +1,13 @@
+@use "../../global" as *;
+
+.c-heading-primary {
+  margin-bottom: 20px; // 標準余白
+  font-weight: normal;
+  @include fz(30);
+  line-height: 1.5;
+  font-family: $font-mincho;
+
+  @include mq(md) {
+    @include fz(24);
+  }
+}
