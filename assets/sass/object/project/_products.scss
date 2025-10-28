@@ -1,0 +1,93 @@
+@use "../../global" as *;
+
+.p-products {
+  background-color: #f4eaea;
+
+  &__content {
+    position: relative;
+    height: 890px;
+
+    @include mq(md) {
+      position: static;
+      height: auto;
+    }
+  }
+
+  &__img-wrapper {
+    &--first {
+      position: absolute;
+      top: 0;
+      // 1000px * 42% = 420px
+      left: 42%;
+      z-index: 30;
+      max-width: 350px;
+      
+      @include mq(md) {
+        // badgeがあるのでrelativeにしている、staticではなくrelativeにしているのでtopとleftにautoを指定している、staticなら放置でいい
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 0 auto 20px;
+      }
+    }
+
+    &--second {
+      position: absolute;
+      top: 250px;
+      // 1000px * 8% = 80px
+      left: 8%;
+      z-index: 20;
+      max-width: 400px;
+
+      @include mq(md) {
+        position: static;
+        margin: 0 auto 20px;
+      }
+    }
+
+    &--third {
+      position: absolute;
+      // 親要素に高さを指定しているのでbottomの方が分かりやすい
+      // top: 570px;
+      bottom: 0;
+      // 1000px * 40% = 400px
+      left: 40%;
+      z-index: 10;
+      max-width: 480px;
+
+      @include mq(md) {
+        position: static;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__badge {
+    display: grid;
+    // justify-content: center;
+    // align-items: center;
+    place-items: center;
+    position: absolute;
+    top: -45px;
+    // 350px * 13% = 45.5px
+    right: -13%;
+    z-index: 40;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: $color-text;
+    color: $color-white;
+    @include fz(20);
+    line-height: 1.2;
+    text-align: center;
+
+    // 下記を記述するとレイアウトがキレイになる
+    @include mq(md) {
+      top: -13px;
+      right: -13px;
+      width: 70px;
+      height: 70px;
+      @include fz(16);
+    }
+  }
+}

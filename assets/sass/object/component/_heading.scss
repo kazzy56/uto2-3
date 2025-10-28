@@ -11,3 +11,21 @@
     @include fz(24);
   }
 }
+
+.c-heading-secondary {
+  margin-bottom: 40px; // 標準余白
+  font-weight: normal;
+  @include fz(80);
+  line-height: 1.2;
+  font-family: $font-mincho;
+  letter-spacing: 0.1em;
+
+  @include mq(md) {
+    margin-bottom: 30px;
+    @include fz(40);
+  }
+  
+  &.p-products__heading {
+    text-transform: uppercase;
+  }
+}

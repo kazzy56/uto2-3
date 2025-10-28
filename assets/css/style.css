@@ -267,6 +267,24 @@ a:hover {
   }
 }
 
+.c-heading-secondary {
+  margin-bottom: 40px;
+  font-weight: normal;
+  font-size: 5rem;
+  line-height: 1.2;
+  font-family: "YuMincho", "Yu Mincho", serif;
+  letter-spacing: 0.1em;
+}
+@media (width <= 767px) {
+  .c-heading-secondary {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+  }
+}
+.c-heading-secondary.p-products__heading {
+  text-transform: uppercase;
+}
+
 .c-logo {
   position: fixed;
   top: 30px;
@@ -333,6 +351,86 @@ a:hover {
 @media (width <= 767px) {
   .p-hero__img {
     height: 400px;
+  }
+}
+
+.p-products {
+  background-color: #f4eaea;
+}
+.p-products__content {
+  position: relative;
+  height: 890px;
+}
+@media (width <= 767px) {
+  .p-products__content {
+    position: static;
+    height: auto;
+  }
+}
+.p-products__img-wrapper--first {
+  position: absolute;
+  top: 0;
+  left: 42%;
+  z-index: 30;
+  max-width: 350px;
+}
+@media (width <= 767px) {
+  .p-products__img-wrapper--first {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 auto 20px;
+  }
+}
+.p-products__img-wrapper--second {
+  position: absolute;
+  top: 250px;
+  left: 8%;
+  z-index: 20;
+  max-width: 400px;
+}
+@media (width <= 767px) {
+  .p-products__img-wrapper--second {
+    position: static;
+    margin: 0 auto 20px;
+  }
+}
+.p-products__img-wrapper--third {
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  z-index: 10;
+  max-width: 480px;
+}
+@media (width <= 767px) {
+  .p-products__img-wrapper--third {
+    position: static;
+    margin: 0 auto;
+  }
+}
+.p-products__badge {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: -45px;
+  right: -13%;
+  z-index: 40;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-align: center;
+}
+@media (width <= 767px) {
+  .p-products__badge {
+    top: -13px;
+    right: -13px;
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
   }
 }
 
