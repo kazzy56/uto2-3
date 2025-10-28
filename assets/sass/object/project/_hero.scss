@@ -1,0 +1,14 @@
+@use "../../global" as *;
+
+.p-hero {
+  &__img {
+    width: 100%;
+    height: 600px;
+    -o-object-fit: cover;
+       object-fit: cover;
+
+    @include mq(md) {
+      height: 400px;
+    }
+  }
+}
